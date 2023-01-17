@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-position : center;
+    background-size: cover;
+    overflow: hidden;
+    background: #000;
+}
+nav{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: #000;
+    z-index: 1;
+}
+.frame{
+   flex-basis: 20%;
+    
+}
+.frame img{
+        --border: 15px;
+        --gap: 12px;
+        --color: #FA6900;
+        
+        width: 150px;
+        aspect-ratio: 1;
+        box-sizing: border-box;
+        border-radius: 50%;
+        margin: 20px;
+        cursor: pointer;
+        padding: calc(var(--border) + var(--gap));
+        
+        --angle: 90deg;
+        background:
+          radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 85.35% 85.35%,
+          conic-gradient(from calc(180deg - var(--angle)/2),#0000 var(--angle),var(--color) 0),
+          radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 14.65% 85.35%;
+        background-size: var(--border) var(--border),auto;
+        background-repeat: no-repeat;
+        
+        -webkit-mask:
+          radial-gradient(farthest-side, 
+           #000  calc(99%  - calc(var(--border) + var(--gap))),
+           #0000 calc(100% - calc(var(--border) + var(--gap))) 
+                 calc(99%  - var(--border)), 
+           #000  calc(100% - var(--border)));
+                mask:
+          radial-gradient(farthest-side, 
+           #000  calc(99%  - calc(var(--border) + var(--gap))),
+           #0000 calc(100% - calc(var(--border) + var(--gap))) 
+                 calc(99%  - var(--border)), 
+           #000  calc(100% - var(--border)));
+        transition: --angle .4s,--gap .4s;
+      
+}
+.frame img:hover {
+    --angle: 0deg;
+    --gap: 5px;
+  }
+nav ul{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 10px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px 30px;
+}
+nav ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.information{
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 65%;
+    left: -10%;
+    transform: translateY(-50%);
+}
+#circle{
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: 1s;
+}
+.feature{
+    position: absolute;
+    display: flex;
+    color: #fff;
+}
+.feature div{
+    margin-left: 30px;
+}
+.one{
+    top: 450px;
+    right: 50px;
+    transform: rotate(0deg);
+}
+.two{
+    top: 150px;
+    left: 350px;
+    transform: rotate(-90deg);
+}
+.three{
+    bottom: 450px;
+    left: 50px;
+    transform: rotate(-180deg);
+}
+.four{
+    bottom: 150px;
+    right: 350px;
+    transform: rotate(-270deg);
+}
+.feature img{
+    width: 70px;
+}
+.mobile{
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.controls{
+    position: absolute;
+    right: 25%;
+    top: 65%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 18px;
+}
+.controls h3{
+    margin: 15px 0;
+    color: #fff;
+}
+#upBtn{
+    width: 35px;
+    cursor: pointer;
+    color: #fff;
+}
+#downBtn{
+    width: 35px;
+    cursor: pointer;
+    color: #fff;
+}
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 500px solid #fff;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid #fff;
+    border-left: 500px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.detailProduct{
+    width: 100%;
+    height: 400px;
+    position : relative;
+}
+.detailProduct h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+}
+.video{
+    width: 100%;
+    position: relative;
+    margin: 20px auto;
+    font-size: 18px;
+    list-style: none;
+    display: inline-block;
+    background: #000;
+}
+.video ul{
+    display: flex;
+    justify-content: center;
+}
+.video ul li{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.video ul li img{
+    
+    width: 300px;
+    height: 300px;
+}
+.caption{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20;
+    color: #fff;
+}
+.info{
+    padding-top: 10%;
+    width: 100%;
+    position: relative;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10%;
+
+}
+/* ảnh phải, text trái */
+.col-left-1{
+    max-width: 700px;
+    padding-left: 10%;
+    color: #333;
+}
+.col-left-1 h2{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+.col-right-1{
+    position: relative;
+    padding-right: 10%;
+}
+.col-right-1 img{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    zoom: 1.25;
+}
+
+/* ảnh trái, text phải */
+.col-right-2{
+    max-width: 700px;
+    padding-right: 10%;
+    color: #333;
+}
+.col-right-2 h2{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+.col-left-2{
+    position: relative;
+    padding-left: 10%;
+}
+.col-left-2 img{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    zoom: 1.25;
+}
